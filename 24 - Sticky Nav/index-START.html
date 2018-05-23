@@ -55,6 +55,22 @@
 
 <script>
 
+  const navBar = document.getElementById('main');
+  const topOfNav = navBar.offsetTop; // relative tot op of document
+
+
+  function fixNav(){
+    if (window.scrollY >= topOfNav){
+      document.body.classList.add('fixed-nav');
+      document.body.style.paddingTop = navBar.offsetHeight + 'px';
+    } else {
+      document.body.style.paddingTop = '0';
+      document.body.classList.remove('fixed-nav');
+    } 
+  }
+
+  window.addEventListener('scroll', fixNav )
+
 </script>
 
 </body>

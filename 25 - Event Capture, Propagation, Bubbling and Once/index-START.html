@@ -40,6 +40,22 @@
 <button></button>
 <script>
 
+  const divs = document.querySelectorAll('div')
+
+  divs.forEach( div => div.addEventListener('click', logText) )
+  docuent.body.addEventListener('click', logText)
+
+  function logText(e){
+    console.log(this.classList.value);
+    console.log(this)
+  }
+
+
+  /* Bubbling
+
+  */
+
+
 </script>
 </body>
 </html>
